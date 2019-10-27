@@ -1,0 +1,11 @@
+Algorithim GCD(a,b)
+
+x = a
+y = b
+while y != 0:
+
+r = x % y
+x = y
+y = r
+end while
+return x

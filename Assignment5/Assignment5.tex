@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[letterpaper]{geometry}
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{amsmath}
+
+\pagestyle{fancyplain}
+\lhead{\large{CSE 015: Discrete Mathematics}}
+\rhead{\large{Fall Semester 2017}}
+
+\title{\bf Homework Assignment 5\\Diffie-Hellman Key Exchange}
+\date{Sunday, November 19 2017}
+\author{Pedro Damian Sanchez Jr}
+
+\begin{document}
+
+\maketitle
+
+\section*{Private Key}
+
+Assume $A = g^a$ mod $p$.
+
+\section*{Public Keys}
+
+Assume $p$ = 9433, and, $g$ = 5.
+
+\section*{Exchange}
+
+Transmission $A =1218$ is recieved.
+
+\section*{Question 1}
+
+What do you need to send me, in order for us to complete the exchange of the key? Show all your work.
+
+\section*{Question 1 Solution}
+
+Assume $B = g^b$ mod $p$; if I choose $b = 6$ then:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$B = (5)^{(6)}$ mod $9433$\\$ = 15625$ mod $9433$\\$ = 6192$\\
+\end{tabular}
+\end{displaymath}
+
+Once I transmit $B = 6192$ we must both arrive at the same $"s"$ by computing the that [$s = A^b$ mod $p$] for me, and, [$s = B^a$ mod $p$] for you.
+
+\section*{Question 2}
+
+If Trudy, the intruder and Eve, the eavesdropper have intercepted all the our communications above, how would they go about recovering the key that we exchanged? Be very specific.
+
+\section*{Question 2 Solution}
+
+Since the private keys $"a"$ and $"b"$ aren't known to either Trudy or Eve, they would first have to compute the value of either of those two keys to decrypt all future transmissions.
+
+\section*{Question 3}
+
+(Bonus question) What is the value of my private key $a$? How much work was required to find it?
+
+\section*{Question 3 Solution}
+
+\begin{displaymath}
+\begin{tabular}{c}
+Private Key $a = 681$
+\end{tabular}
+\end{displaymath}
+
+To find that value, an algorithm must be implemented to test all numbers between 1 and 9433.
+
+\end{document}

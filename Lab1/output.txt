@@ -1,0 +1,33 @@
+Basic Operations Test
+
+False
+True
+False
+False
+False
+True
+
+****************************************
+
+Simple Evaluation Function Test
+
+p = True
+q = False
+
+(p or q):    True
+(p and q):   False
+(p -> q):    False
+(p <-> q):   False
+-p:          False
+
+****************************************
+
+Recursive Evaluation Function Test
+
+p = False
+q = False
+
+(p or q) or -p:  True
+(p or q) and -p:  False
+
+****************************************

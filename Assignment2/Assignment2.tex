@@ -1,0 +1,270 @@
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[letterpaper]{geometry}
+\usepackage{graphicx}
+
+\pagestyle{fancyplain}
+\lhead{\large{CSE 015: Discrete Mathematics}}
+\rhead{\large{Fall Semester 2017}}
+
+
+\title{\bf Homework Assignment 2}
+\date{Sunday, September 24 2017}
+\author{ Pedro Damian Sanchez Jr}
+
+\begin{document}
+
+\maketitle
+
+\section{Section-1.6 Rules of Inference}
+
+\subsection{Problem 1}
+
+Find the argument form for the following argument and determine whether it is valid. Can we conclude that the conclusion is true if the premises are true? {\bf If Socrates is human, then Socrates is mortal. Socrates is human, therefore, Socrates is mortal.}
+
+\subsection{Problem 1 Solution}
+
+Let $a$ = "Socrates is human" and $b$ = "Socrates is mortal"
+
+\begin{displaymath}
+	\frac{a}{b}, \iff, a \to b
+\end{displaymath}
+
+Both statements are true, therefore the conclusion is true.
+
+\subsection{Problem 2}
+
+Find the argument form for the following argument and determine whether it is valid. Can we conclude that the conclusion is true if the premises are true? {\bf If George does not have eight legs, then George is not a spider. George is a spider, therefore, George has eight legs.}
+
+\subsection{Problem 2 Solution}
+
+Let $a$ = "If George does not even eight legs" and $b$ = "then George is not a spider"
+
+\begin{displaymath}
+	\frac{a}{b}, \iff, a \to b
+\end{displaymath}
+
+Both statements are true, therefore the conclusion is true.
+
+\subsection{Problem 5}
+
+Use rules of inference to show that the hypotheses “Randy works hard,” “If Randy works hard, then he is a dull boy,” and “If Randy is a dull boy, then he will not get the job” imply the conclusion “Randy will not get the job.”
+
+\subsection{Problem 5 Solution}
+
+Let $a$ = "It rains", $b$ = "It is foggy" and $c$ = "The sailing race will be held"
+
+\begin{displaymath}
+	\frac{a \to \lnot c}{b \to \lnot c}, \iff, a \to b
+\end{displaymath}
+
+The Hypothetical Syllogism conclused that Randy will not get the job because he is a dull boy.
+
+\subsection{Problem 6}
+
+Use rules of inference to show that the hypotheses “If it does not rain or if it is not foggy, then the sailing race will be held and the lifesaving demonstration will go on,” “If the sailing race is held, then the trophy will be awarded,” and “The trophy was not awarded” imply the conclusion “It rained.”
+
+\subsection{Problem 6 Solution}
+
+Let $a$ = "It rains", $b$ = "It is foggy", $c$ = "The sailing race will be held", $d$ = "The life saving demonstration will go on" and $e$ = "The trophy will be awarded"
+
+\begin{displaymath}
+\begin{tabular}{c c}
+	{\bf Logic} & {\bf Reason} \\
+	$\lnot e$ & Hypothesis  \\
+	$(c \to e)$ & Hypothesis  \\
+	$\lnot c$ & Modus Tollens \\
+	$(\lnot a \lor b) \to (c \land d)$ & Hypothesis \\
+	$(\lnot (c  \land d) \to (\lnot (\lnot a \lor \lnot b))$ & $(\lnot a \lor b) \to (c \land d)$ Contrapostive \\
+	$(\lnot c \lor \lnot d) \to (a \land b)$ & De Morgan's Law and Double Negative \\
+	$(\lnot c \lor \lnot d)$ & Addition to Statement \\
+	$(a \to b)$ & Modus Ponens of Results\\
+	$a$ & Simplification of Conclusion  \\
+\end{tabular}
+\end{displaymath}
+
+\section{Section-1.7 Introduction to Proofs}
+
+\subsection{Problem 1}
+
+Use a direct proof to showthat the sum of two odd integers is even.
+
+\subsection{Problem 1 Solution}
+
+Let $a$ and $b$ equal two odd intergers, and, let $c$ and $d$ equal any other two integers. The flowing is implied:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$a = 2c+ 1$, and, $b = 2d+1;$ \\
+$\to a + b = (2c + 1) + (2d + 1);$ \\
+$\to 2c+ 1 + 2d +1;$ \\
+$\to 2c + 2d + 2;$ \\
+$\to 2(c + d + 1)$ is even; \\
+\end{tabular}
+\end{displaymath}
+
+Therefore, the sum of any two odd integers is always even.
+
+\subsection{Problem 2}
+
+Use a direct proof to show that the sum of two even integers is even.
+
+\subsection {Problem 2 Solution}
+
+Let $a$ and $b$ equal two even intergers, and, let $c$ and $d$ equal any other two integers. The flowing is implied:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$a = 2c$, and, $b = 2d;$ \\
+$\to a + b = 2c + 2d;$ \\
+$\to a + b = 2(c + d)$ is even; \\
+\end{tabular}
+\end{displaymath}
+
+Therefore, the sum of any two even integers is always even.
+
+\subsection{Problem 3}
+
+Show that the square of an even number is an even number using a direct proof.
+
+\subsection{Problem 3 Solution}
+
+Let $a$ equal an even number, and, let $b$ equal any integer. The flowing is implied:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$a = 2b;$ \\
+$\to a^2 = (2b)^2;$ \\
+$\to a^2 = 2b * 2b;$ \\
+$\to a^2 = 4b^2;$ \\
+$\to a^2 = 2(2b)^2$ is even; \\
+\end{tabular}
+\end{displaymath}
+
+Therefore, the square of any even number is always even.
+
+\subsection{Problem 6}
+
+Use a direct proof to show that the product of two odd numbers is odd.
+
+\subsection{Problem 6 Solution}
+
+Let $a$ and $b$ equal two odd intergers, and, let $c$ and $d$ equal any other two integers. The flowing is implied:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$a = 2c+ 1$, and, $b = 2d+1;$ \\
+$\to a * b = (2c + 1) * (2d + 1);$ \\
+$\to  a * b = 4cd + 2c + 2d +1;$ \\
+$\to  a * b = 2(2cd + c + d)$ is odd; \\
+\end{tabular}
+\end{displaymath}
+
+Therefore, the product of any two odd numbers is always odd.
+
+\subsection{Problem 9}
+
+Use a proof by contradiction to prove that the sum of an irrational number and a rational number is irrational.
+
+\subsection{Problem 9 Solution}
+
+Let $a$ be a rational number and let $b$ represent an irrational number, we establish that {\bf $a + b$} is irrational by Proof of Contradiction:
+
+\begin{displaymath}
+\begin{tabular}{c}
+Let, $n = a + b;$ \\
+When $n$ is rational $\to a + b = 2(c + d)$ is even; \\
+\end{tabular}
+\end{displaymath}
+
+Now we have, $n + (-a) = a + b + (-a)$; since whenever $a$ is rational, the expression $-a$ is also rational, the following is implied:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$n + (-a) = b$ is rational; \\
+\end{tabular}
+\end{displaymath}
+
+Where as the expression $n$ inherently irrational. This contradicts the assumption of the of is two rational number,$ R+ R$, is also, $R$, a rational number; which implies that $n$ is an irrational number. Therefore, the sum of an rational number with an irrational number will be irrational as a result.
+
+\subsection{Problem 11}
+
+Prove or disprove that the product of two irrational numbers is irrational.
+
+\subsection{Problem 11 Solution}
+
+Let $a = b = sqrt(3)$ be a non-zero irrational number implies:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$a * b = sqrt(3) * sqrt(3) = 3;$ \\
+\end{tabular}
+\end{displaymath}
+
+The result is a rational number; therefore, the product of two irrational numbers is not necessarily an irrational number.
+
+\subsection{Problem 17}
+
+Show that if $n$ is an integer and $n^3 + 5$ is odd, then $n$ is an even number as a result using Proof of Contraposition and Proof of Contradiction.
+
+\subsection{Problem 17 Solution}
+
+\begin{itemize}
+	\item Proof of Contraposition:
+\end{itemize}
+
+Note that if $a$ is an odd number, then $n^3 + 5$ will summarize into an even number. Now assume that $n$ is in fact odd; by definition $n =
+2k + 1$, where $k$ is any integer. We now have:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$(n^3 + 5) = (2k + 1)^3 + 5;$ \\
+$\to (n^3 + 5) = 8k^3  + 12k^2 + 6k + 1 + 5;$ \\
+$\to (n^3 + 5) = 2 * (4k^3  + 6k^2 + 3k + 3);$ \\
+$\to (n^3 + 5) = 2 * p$, where $p = (4k^3  + 6k^2 + 3k + 3);$ \\
+\end{tabular}
+\end{displaymath}
+
+Thus $n^3 + 5$ will be even; therefore, if $n$ is any integer and $n^3 + 5$ is odd, then $n$ will be an even number as a result.
+
+\begin{itemize}
+	\item Proof of Contradiction:
+\end{itemize}
+
+Suppose that $n^3 + 5$ is odd and $n$ is also odd; after using the result product of two odd numbers odd, twice, to $n^3$, it becomes apparent that $n^3$ is odd. $(n^3 + 5) - n^3$, however, is an even number as the difference of two odd numbers is always even. This implies that $n^3 + 5 - n^3 = 5$ is even, which of course is not true. It is therefore, that, if $n$ is any integer and $n^3 + 5$ is odd, then $n$ will be an even number as a result.
+
+\subsection{Problem 18}
+
+Prove that if $n$ is any integer and $3n + 2$ is even, then $n$ is even using as a result using Proof of Contraposition and Proof of Contradiction.
+
+\subsection{Problem 18 Solution}
+
+\begin{itemize}
+	\item Proof of Contraposition:
+\end{itemize}
+
+The Contraposition of $n$ is any integer and $3n + 2$ is even, is:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$p \to q, \iff, \lnot q \to \lnot p;$ \\
+\end{tabular}
+\end{displaymath}
+
+where $p$ meets the conditions, $n$ is any integer and $3n + 2$ is even. This makes $\lnot p$ fail the condition, $3n + 2$ is even. Likewise $q$ implies $n$ is even and $\lnot q$ is odd. Assume $n$ is odd for some integer $k$, then $n = 2k + 1$; this implies:
+
+\begin{displaymath}
+\begin{tabular}{c}
+$(3n + 2) = 3(2k + 1) + 2;$ \\
+$\to (3n + 2) = 6k + 3 + 2;$ \\
+$\to (3n + 2) = 6k + 5;$ \\
+$\to (3n + 2) = 6k + 4 + 1;$ \\
+$\to (3n + 2) = 2(3k + 2) + 1$ is odd;\\
+making (3n+2) odd;
+\end{tabular}
+\end{displaymath}
+
+Therefore, if $n$ is any integer and $3n + 2$ is even, then $n$ is even using as a result.
+
+\end{document}

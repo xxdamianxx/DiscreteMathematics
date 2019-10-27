@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[letterpaper]{geometry}
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{amsmath}
+
+\pagestyle{fancyplain}
+\lhead{\large{CSE 015: Discrete Mathematics}}
+\rhead{\large{Fall Semester 2017}}
+
+\title{\bf Homework Assignment 6}
+\date{Sunday, December 10 2017}
+\author{Pedro Damian Sanchez Jr}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1}
+
+There are 18 mathematics majors and 325 computer science majors at a college.
+
+\begin{itemize}
+\item In how many ways can two representatives be picked so that one is a mathematics major and the other is a computer science major?
+\item In how many ways can one representative be picked who is either a mathematics major or a computer science major?
+\end{itemize}
+
+\section*{Question 1 Solution}
+
+\begin{itemize}
+\item Since there are 18 math majors, there are 18 ways to choose a math major, and, since there are 325 computer science majors, there are 325 ways to choose a computer science major. Therefore, there are $18*325=5850$ ways to select a representative for each group.
+\item Since only one person needs to be selected to represent both groups, and, there is no regard as to which pool the representative is chosen from, there are $18+325=343$ ways to select one representative.
+\end{itemize}
+
+\section*{Question 5}
+
+Six different airlines fly from New York to Denver and seven fly from Denver to San Francisco. How many different pairs of airlines can you choose on which to book a trip from NewYork to San Francisco via Denver, when you pick an airline for the flight to Denver and an airline for the continuation flight to San Francisco?
+
+\section*{Question 5 Solution}
+
+It is known that there are six airlines which travel from New York to Denver, and, seven airlines which travel from Denver to San Francisco. Therefore, if a traveller wants to fly from New York to San Francisco, the total possible arrangements transversing the Denver airport comes out to $6*7=42$ different combinations in flight options.
+
+\section*{Question 7}
+
+How many different three-letter initials can people have?
+
+\section*{Question 7 Solution}
+
+Since there are twenty six letters in the english alphabet, each inital has a total of twenty six possibilities. Therefore, there are a total of $26*26*26=26^3=17,576$ possible combinations of three-letter initials.
+
+\section*{Question 8}
+
+How many different three-letter initials with none of the letters repeated can people have?
+
+\section*{Question 8 Solution}
+
+There exists a total of $26*25*24=15,600$ possible combinations of three-letter initials.
+
+\section*{Question 9}
+
+How many different three-letter initials are there that begin with an A?
+
+\section*{Question 9 Solution}
+
+There exists a total of $26*26=26^2=676$ possible combinations of three-letter initials beginning with the letter A.
+
+\section*{Question 14}
+
+How many bit strings of length $n$, where $n$ is a positive integer, start and end with 1's?
+
+\section*{Question 14 Solution}
+
+The number of bit strings with length $n$ is $2^n$. However, if the first and last positions of these strings are restricted to consist of only 1's, then the number of possible arrangements falls to $2^{n-2}$.
+
+\section*{Question 46}
+
+In how many ways can a photographer at a wedding arrange 6 people in a row from a group of 10 people, where the bride and the groom are among these 10 people, if:
+
+\begin{itemize}
+\item the bride must be in the picture?
+\item both the bride and groom must be in the picture?
+\item exactly one of the bride and the groom is in the picture?
+\end{itemize}
+
+\section*{Question 46 Solution}
+
+\begin{itemize}
+\item If the bride is to be in the picture then she must always be one of the 6 in the arrangement, which leaves the other 9 peope to be positoned in any assortment. This gives us $6*9*8*7*6*5=90,720$ possible way to arrange a group photo with the lovely bride.
+\item If both the bride and the groom are always to appear in the photo shot then there are $6*5*8*7*6*5=50,400$.
+\item Same shit as the first one, but now with both bride only and groom only, so it's got to look like this $2*6*8*7*6*5*4=80,640$.
+\end{itemize}
+
+\end{document}
